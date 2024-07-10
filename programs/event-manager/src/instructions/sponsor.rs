@@ -1,4 +1,3 @@
-
 use {
     crate::collections::Event, 
     anchor_lang::prelude::*, 
@@ -102,5 +101,6 @@ pub fn handle(
         ),
         quantity,
     )?;
+    ctx.accounts.event.sponsors += quantity;
     Ok(())
   }
